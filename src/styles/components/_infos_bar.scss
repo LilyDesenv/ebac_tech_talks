@@ -1,0 +1,45 @@
+@use 'variables';
+
+.infos_bar{
+    background-color: variables.$corDeFundoBarra;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+
+    &__infos{
+        display: flex;
+        gap: 40px;
+
+
+        &__item{
+            font-size: 14px;
+            color: variables.$corTextoSecundario;
+
+            b{
+                font-size: 18px;
+                display: block;
+                color: variables.$corTextoSecundario;
+            }
+        }
+
+    }
+
+    @media (max-width: 640px){
+        display: block;
+
+        &__infos{
+            display: block;
+
+            &__item{
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (min-width: 641px) and (max-width: 1023px){
+        &__infos{
+            gap: 16px;
+        }
+    }
+
+}
